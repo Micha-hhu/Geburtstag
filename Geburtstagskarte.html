@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Geburtstagskarte</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .card-container {
+      perspective: 1000px;
+      width: 300px; /* Anpassen der Kartenbreite */
+      height: 500px; /* Anpassen der Kartenhöhe */
+    }
+    .card {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.6s;
+      cursor: pointer;
+    }
+    .card:hover {
+      transform: rotateY(180deg);
+    }
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      font-size: 24px;
+    }
+    .front {
+      background-color: #ffcc00; /* Hintergrundfarbe der Vorderseite anpassen */
+    }
+    .back {
+      background-color: #66ccff; /* Hintergrundfarbe der Rückseite anpassen */
+      transform: rotateY(180deg);
+      color: white;
+    }
+    .decoration {
+      margin-top: 20px;
+      font-size: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card-container">
+    <div class="card">
+      <div class="card-face front">
+        <h1>Alles Gute zum Geburtstag!</h1>
+        <p>Klicke hier, um die Karte umzudrehen.</p>
+      </div>
+      <div class="card-face back">
+        <h1>Herzlichen Glückwunsch, Inna!</h1>
+        <p>Alles Liebe und die besten Wünsche für dich!</p>
+        <div class="decoration">&#127874; 🎂</div> <!-- Dekorationen wie ein Kuchen -->
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
